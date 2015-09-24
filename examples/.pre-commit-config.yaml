@@ -1,0 +1,25 @@
+- repo: git@github.com:pre-commit/pre-commit-hooks
+  sha: 0d88124ef6343fbbc6c9d2872853f73546c98a3f
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: debug-statements
+  - id: flake8
+    args:
+    - --max-line-length=99
+    - --exclude=*/migrations/*,docs/*
+  - id: check-added-large-files
+  - id: requirements-txt-fixer
+    args:
+    - requirements.txt
+    - requirements-dev.txt
+- repo: git://github.com/FalconSocial/pre-commit-mirrors-pep257
+  sha: 67c970e89857fdcebcd59ace94950a3331985a3b
+  hooks:
+  - id: pep257
+    args:
+    - -e
+-   repo: git://github.com/FalconSocial/pre-commit-python-sorter
+  sha: 8e5cbbc530d770a395de0514befa428198ffb053
+  hooks:
+  - id: python-import-sorter
