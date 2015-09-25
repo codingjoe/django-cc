@@ -1,5 +1,36 @@
-# Code of Conduct
+# Contributing Guide
 
+**Status of this document:** Draft
+
+## Table of Contents
+0. [Quick Start Guide](#Quick Start Guide)
+1. [Code of Conduct](#Code of Conduct)
+2. [Code Style](#Code Style)
+ 1. [Python](#Python)
+ 2. [Django](#Django)
+  1. [Apps](#Apps)
+  2. [Models](#Models)
+  3. [Forms](#Forms)
+  4. [Templates](#Templates)
+  5. [URL patterns](#URL patterns)
+3. [Documentation](#Documentation)
+4. [Git](#Git)
+ 1. [Commits](#Commits)
+ 2. [Pull-Requests & Patches](#Pull-Requests & Patches)
+ 3. [Tags](#Tags)
+ 4. [Bug tracking, features, issues](#Bug tracking, features, issues)
+ 5. [Releases](#Releases)
+
+## Quick Start Guide
+Getting started is easy. Just install:
+
+```bash
+pip install -r requirements-dev.txt; pre-commit install
+```
+
+To make contributing even easier, make your editor's or IDE's [EditorConfig] support is enabled.
+
+## Code of Conduct
 As contributors and maintainers of this project, and in the interest of fostering an open and welcoming community, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities.
 
 We are committed to making participation in this project a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, or nationality.
@@ -20,3 +51,85 @@ This code of conduct applies both within project spaces and in public spaces whe
 Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by opening an issue or contacting one or more of the project maintainers.
 
 This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org), version 1.2.0, available at [http://contributor-covenant.org/version/1/2/0/](http://contributor-covenant.org/version/1/2/0/)
+
+## Code Style
+
+### Python
+- [pep8]
+- [pep20]
+- [pep257]
+- [pep287]
+
+### Django
+
+We embrace the [django coding style] with the following additions.
+
+#### Apps
+Apps should be named according to the system they contain. If there is no system
+name you may use the plural of the main model's name.
+
+#### Models
+Models are defined according to the [django coding style] with the addition of
+[choices]. Choices are declared right above the corresponding field. The field
+default is set using a choices attribute.
+
+#### Forms
+We declare `ModelForm`s just like we do `Model`s.
+
+#### Templates
+Templates are located in the following directory structure: `/{app_name}/templates/{app_name}/`
+Every template should be named `{model_name}_{template_name_suffix}`, eg:
+
+    customer_create.html
+    customer_update.html
+    customer_detail.html
+
+##### URL patterns
+- All apps should use url **namespaces**, the namespace should be identical to the app name.
+- Patterns should be in a separate line than the view and name.
+- We do not use view decorators in the url configuration.
+- We follow the [django admin][reversing-admin-urls] url pattern, and
+[djangorestframework][drf-routers] url name pattern.
+
+Eg:
+
+    from . import views
+
+    urlpatterns = patterns(
+        'customers.views',
+        url(r'^customer/$',
+         views.CustomerListView.as_view(), name='customer-list'),
+        url(r'^customer/create',
+         views.CustomerCreateView.as_view(), name='customer-create'),
+        url(r'^customer/(?P<pk>\d+)/$',
+         views.CustomerDetailView.as_view(), name='customer-detail'),
+        url(r'^customer/(?P<pk>\d+)/update',
+         views.CustomerUpdateView.as_view(), name='customer-update'),
+    )
+
+## Documentation
+- [pep257]
+- [pep287]
+
+## Git
+
+### Commits
+
+### Pull-Requests & Patches
+
+### Tags
+
+## Bug tracking, features, issues
+
+## Releases
+
+
+[editorconfig]: (examples/.editorconfig)
+[pep8]: http://legacy.python.org/dev/peps/pep-0008/
+[pep20]: http://legacy.python.org/dev/peps/pep-0020/
+[pep257]: http://legacy.python.org/dev/peps/pep-0257/
+[pep287]: http://legacy.python.org/dev/peps/pep-0287/
+[reversing-admin-urls]: https://docs.djangoproject.com/en/dev/ref/contrib/admin/#reversing-admin-urls
+[drf-routers]: http://www.django-rest-framework.org/api-guide/routers/
+[choices]: https://django-model-utils.readthedocs.org/en/latest/utilities.html#choices
+[django coding style]: https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/
