@@ -28,7 +28,7 @@ Getting started is easy. Just install:
 pip install -r requirements-dev.txt; pre-commit install
 ```
 
-To make contributing even easier, make your editor's or IDE's [EditorConfig] support is enabled.
+To make contributing even easier, make sure your editor's or IDE's [EditorConfig] support is enabled.
 
 ## Code of Conduct
 As contributors and maintainers of this project, and in the interest of fostering an open and welcoming community, we pledge to respect all people who contribute through reporting issues, posting feature requests, updating documentation, submitting pull requests or patches, and other activities.
@@ -122,6 +122,10 @@ Eg:
 ## Bug tracking, features, issues
 
 ## Releases
+
+### Versioning
+Versioning happens as defined in [Semantic Versioning 2.0.0](http://semver.org/spec/v2.0.0.html)
+by Tom Preston-Werner.
 
 
 [editorconfig]: (examples/.editorconfig)
