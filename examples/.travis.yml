@@ -17,17 +17,17 @@ env:
 matrix:
   fast_finish: true
   allow_failures:
+    - python: "3.5"
     - env: DJANGO="-e git+https://github.com/django/django.git@master#egg=Django"
 install:
   - pip install --upgrade pip
-  - pip install -e .
   - pip install -r requirements-dev.txt
   - pip install $DJANGO
   - pip install --upgrade coveralls
 script:
   - isort --check-only --recursive --diff .
   - flake8 --jobs=2 .
-  - pep257
+  - pep257 --verbose --explain --source --count
   - coverage run # Your run command.
 after_success:
   - coveralls

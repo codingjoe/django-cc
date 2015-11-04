@@ -18,8 +18,9 @@
   hooks:
   - id: pep257
     args:
-    - -e
--   repo: git://github.com/FalconSocial/pre-commit-python-sorter
-  sha: 8e5cbbc530d770a395de0514befa428198ffb053
+    - --explain
+    - --ignore=D203
+- repo: git://github.com/FalconSocial/pre-commit-python-sorter
+  sha: 934072fb29303aaa64bead610be042049e9db488
   hooks:
   - id: python-import-sorter
