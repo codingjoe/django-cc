@@ -90,9 +90,9 @@ customer_detail.html
 - We follow the [django admin][reversing-admin-urls] url pattern, and
 - [djangorestframework][drf-routers] url name pattern.
 
-Eg:
+Example:
 
-```
+```python
 from . import views
 
 urlpatterns = patterns(
