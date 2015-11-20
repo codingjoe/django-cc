@@ -75,12 +75,22 @@ Models are defined according to the [django coding style] with the addition of [
 We declare `ModelForm`s just like we do `Model`s.
 
 #### Templates
-Templates are located in the following directory structure: `/{app_name}/templates/{app_name}/` Every template should be named `{model_name}_{template_name_suffix}`, eg:
+Templates are located in the following directory structure: `/{app_name}/templates/{app_name}/`
+
+Every template should be named `{model_name}_{template_name_suffix}` if possible.
+Furthermore all templates within the same app should share a common ancestor
+called, `base.html` or if possible not extend parent template.
+As a result each template should start with `{% extend '{app_name}/base.html' %}`
+or not extend at all.
+
+Example:
 
 ```
-customer_create.html
-customer_update.html
-customer_detail.html
+/myapp/templates/myapp/
+    ./base.html
+    ./customer_create.html
+    ./customer_update.html
+    ./customer_detail.html
 ```
 
 ##### URL patterns
