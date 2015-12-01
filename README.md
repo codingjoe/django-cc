@@ -30,7 +30,7 @@ The example file includes all file types defined in the contribution including t
 ### [isort][isort]
 isort your python imports for you so you don't have to. [[2]][isort]
 
-isort is configured in the [pre-commit][pre-commit-config.yml], [setup.cfg] and [editorconfig].
+isort is configured in the [pre-commit][pre-commit-config.yaml], [setup.cfg] and [editorconfig].
 
 ### [flake8][flake8]
 Flake8 is a wrapper around these tools: [[3]][flake8]
@@ -52,4 +52,4 @@ A framework for managing and maintaining multi-language pre-commit hooks. [[4]][
 [flake8]: (https://flake8.readthedocs.org/en/latest/)
 [pep257]: (https://github.com/GreenSteam/pep257)
 [setup.cfg]: examples/setup.cfg
-[pre-commit-config.yml]: examples/.pre-commit-config.yml
+[pre-commit-config.yaml]: examples/.pre-commit-config.yaml
