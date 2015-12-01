@@ -47,9 +47,9 @@ pep257 checks doc strings with their compliance with [PEP 257](https://www.pytho
 A framework for managing and maintaining multi-language pre-commit hooks. [[4]][pre-commit]
 
 [pre-commit]: (http://pre-commit.com/)
-[editorconfig]: (examples/.editorconfig)
+[editorconfig]: examples/.editorconfig
 [isort]: (https://github.com/timothycrosley/isort)
 [flake8]: (https://flake8.readthedocs.org/en/latest/)
 [pep257]: (https://github.com/GreenSteam/pep257)
 [setup.cfg]: examples/setup.cfg
-[pre-commit-config.yml]: (examples/.pre-commit-config.yml)
+[pre-commit-config.yml]: examples/.pre-commit-config.yml

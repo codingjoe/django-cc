@@ -162,7 +162,7 @@ This project officially support the latest version of Django only. This allows f
 
 People looking for support for an older Django version, may use an older release that supported the Django version in question.
 
-[editorconfig]: (examples/.editorconfig)
+[editorconfig]: examples/.editorconfig
 [pep8]: http://legacy.python.org/dev/peps/pep-0008/
 [pep20]: http://legacy.python.org/dev/peps/pep-0020/
 [pep257]: http://legacy.python.org/dev/peps/pep-0257/
