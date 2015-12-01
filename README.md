@@ -15,7 +15,12 @@ The contribution guide is the central part of the projects. All tools and exampl
 
 **Contents**
 
-1. [Code of Conduct](CONTRIBUTING.md# Code of Conduct)
+1. [Quick Start Guide](CONTRIBUTING.md#Quick Start Guide)
+2. [Code of Conduct](CONTRIBUTING.md#Code of Conduct)
+3. [Code Style](CONTRIBUTING.md#Code Style)
+4. [Documentation](CONTRIBUTING.md#Documentation)
+5. [Git](CONTRIBUTING.md#Git)
+6. [Releases](CONTRIBUTING.md#Releases)
 
 ## Tools
 The tool belt consists of a set of tools and configuration files that ensure contributions to be aligned with the contribution guide.
