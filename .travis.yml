@@ -1,0 +1,19 @@
+language: python
+sudo: false
+cache:
+  - pip
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "pypy"
+  - "pypy3"
+install:
+  - pip install --upgrade pip
+  - pip install -r requirements-dev.txt
+script:
+  - isort --check-only --recursive --diff .
+  - flake8 --jobs=2 .
+  - pep257 --verbose --explain --source --count
+after_success:
+  - coveralls
