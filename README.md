@@ -28,7 +28,7 @@ The tool belt consists of a set of tools and configuration files that ensure con
 ### DCC
 Wo make things even easier we cooked up a little tool for you called `dcc`.
 It will set you up with just one simple command, so you can focus on implementing
-that feature you've been thining about.
+that feature you've been thinking about.
 
 To get started just install `dcc` globally.
 
@@ -49,13 +49,13 @@ optional arguments:
   -v          verbose mode (default: off)
 ```
 
-So if you want to write a feature for django-select2, just type:
+So if you want to write a feature for `django-select2`, just type:
 ```bash
 $ dcc django-select2
 ```
 
 #### DCC for maintainers
-Supporting DCC is easy, all you need to do is set the `download_url` to you Github repository in your `setup.py` file.
+Supporting DCC is easy, all you need to do is set the `download_url` to you GitHub repository in your `setup.py` file.
 
 e.g.
 ```python
@@ -75,20 +75,20 @@ EditorConfig helps developers define and maintain consistent coding styles betwe
 
 EditorConfig enables contributors to align their code with the guideline while writing it.
 
-The example file includes all file types defined in the contribution including the [isort](#isort) config.
+The example file includes all file types defined in the contribution including the [`isort`](#isort) configuration.
 
 ### [isort][isort]
 isort your python imports for you so you don't have to. [[2]][isort]
 
-isort is configured in the [pre-commit][pre-commit-config.yaml], [setup.cfg] and [editorconfig].
+isort is configured in the [pre-commit][pre-commit-config.yaml], [`setup.cfg`][setup.cfg] and [`editorconfig`][editorconfig].
 
-### [flake8][flake8]
+### [Flake8][flake8]
 Flake8 is a wrapper around these tools: [[3]][flake8]
 - [PyFlakes](https://launchpad.net/pyflakes)
 - [pep8](https://github.com/jcrocholl/pep8)
 - Ned Batchelder's [McCabe](http://nedbatchelder.com/blog/200803/python_code_complexity_microtool.html) script
 
-Additionally the [setup.cfg] file make use of [pep8-naming](https://github.com/flintwork/pep8-naming), an flake8 extension, that checks for pep8 conform naming.
+Additionally the [`setup.cfg`][setup.cfg] file make use of [pep8-naming](https://github.com/flintwork/pep8-naming), an Flake8 extension, that checks for pep8 conform naming.
 
 ### [pep257][pep257]
 pep257 checks doc strings with their compliance with [PEP 257](https://www.python.org/dev/peps/pep-0257/).

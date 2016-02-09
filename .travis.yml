@@ -11,9 +11,12 @@ python:
 install:
   - pip install --upgrade pip
   - pip install -r requirements-dev.txt
+before_script:
+  - npm i markdown-spellcheck -g
 script:
   - isort --check-only --recursive --diff .
   - flake8 --jobs=2 .
   - pep257 --verbose --explain --source --count
+  - mdspell --en-us -ran "**/*.md"
 after_success:
   - coveralls

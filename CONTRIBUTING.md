@@ -63,13 +63,13 @@ This Code of Conduct is adapted from the [Contributor Covenant](http://contribut
 - [pep287]
 
 ### Django
-We embrace the [django coding style] with the following additions.
+We embrace the [Django coding style] with the following additions.
 
 #### Apps
 Apps should be named according to the system they contain. If there is no system name you may use the plural of the main model's name.
 
 #### Models
-Models are defined according to the [django coding style] with the addition of [choices]. Choices are declared right above the corresponding field. The field default is set using a choices attribute.
+Models are defined according to the [Django coding style] with the addition of [choices]. Choices are declared right above the corresponding field. The field default is set using a choices attribute.
 
 #### Forms
 We declare `ModelForm`s just like we do `Model`s.
@@ -94,11 +94,11 @@ Example:
 ```
 
 ##### URL patterns
-- All apps should use url **namespaces**, the namespace should be identical to the app name.
+- All apps should use URL **namespaces**, the namespace should be identical to the app name.
 - Patterns should be in a separate line than the view and name.
-- We do not use view decorators in the url configuration.
-- We follow the [django admin][reversing-admin-urls] url pattern, and
-- [djangorestframework][drf-routers] url name pattern.
+- We do not use view decorators in the URL configuration.
+- We follow the [Django admin][reversing-admin-urls] URL pattern, and
+- [Django Rest Framework][drf-routers] URL name pattern.
 
 Example:
 
