@@ -1,22 +1,29 @@
 language: python
 sudo: false
 cache:
-  - pip
+- pip
 python:
-  - "2.7"
-  - "3.4"
-  - "3.5"
-  - "pypy"
-  - "pypy3"
+- '2.7'
+- '3.4'
+- '3.5'
 install:
-  - pip install --upgrade pip
-  - pip install -r requirements-dev.txt
+- pip install --upgrade pip
+- pip install -r requirements-dev.txt
 before_script:
-  - npm i markdown-spellcheck -g
+- npm i markdown-spellcheck -g
 script:
-  - isort --check-only --recursive --diff .
-  - flake8 --jobs=2 .
-  - pep257 --verbose --explain --source --count
-  - mdspell --en-us -ran "**/*.md"
+- isort --check-only --recursive --diff .
+- flake8 --jobs=2 .
+- pep257 --verbose --explain --source --count
+- mdspell --en-us -ran "**/*.md"
 after_success:
-  - coveralls
+- coveralls
+deploy:
+  provider: pypi
+  user: codingjoe
+  password:
+    secure: 0PtfGveuZlSNTtd3FSuxBRfsFFItCmHSB2RT+v2J9VPdcDg4UQ8hjDWrYnrOtTRJhACfmSO4g+49xP6KpIAen7eboH34ThiU9cQDq2y1X4UZDwCW86t7dAdGBjEjAcPYg25YJcDgpPBtomqaqSPUNunbHgYEwYIAky6Te9VEbHMTA/Jw3u31v+GmmOiH+tPEv1kkcGh02cTn77C4A81GXSzV1zBkTSD3vpvwW27EXfjpDQWq5+8epC4JOxku7tBhTLf+mKYBRF/WlHu53p/OSRBG07O9wYLYWJtD9mnGvFcUUt2y8QSWs09/0rf4DUQx4zeZ+Q43E8nqdAwx7idgmnH5Pm1RRX/MYb+a7ZkGAWQPtkOzV1g4ydE+L7DXSZziSZ/X6Ijkr2KaN5vy3h7jHGWEeIKbZFpI/2//xu8k+XSC25wvjjkjoY6NqfagtwiAZLLXyVsj7KZCF3hSzEQB63JlT5tZjkoj3HZk4NV6juxfSahHUPioJv/WcHFtlCZE3faVqccWhcpGy/+XsFmNK7/DxsZRMm2JGk+mLv6ln2uR/s1yDbKKdkl+uzIVxHESiRECJS3QQdbaLVRP85AmQcBISjRYvFtG44srXqgCf4W/XG1BjlgEJNMIUM8POB8lRyWiEUhvfwHkwPDsBG0Gve4zhPqys8fL4S63YHXc5SI=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: codingjoe/django-cc
