@@ -191,7 +191,7 @@ Every release is to be tagged with the version number.
 
 Example:
 ```bash
-git tag v2.3.1
+git tag 2.3.1
 git push --tags
 ```
 
@@ -201,11 +201,11 @@ All changes should be listed and grouped by bug fixed, new and changed features.
 
 Example for a `CHANGELOG.md` file:
 ```Mardown
-# v2.3.1 _latest_
+# 2.3.1 _latest_
 - Fixes #1234 -- Nasty bug making the whole thing freeze
 - Fixes #1244 -- Yet another issue
 
-# v2.3.0
+# 2.3.0
 - Changes #1129 -- Switched important engine
 - Adds #459 -- Support for that amazing new feature
 - Fixes #1245 -- Yet another issue
