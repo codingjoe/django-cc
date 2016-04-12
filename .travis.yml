@@ -14,9 +14,9 @@ before_script:
 script:
 - isort --check-only --recursive --diff .
 - flake8 --jobs=2 .
-- pep257 --verbose --explain --source --count
+- pydocstyle --verbose --explain --source --count
 - mdspell --en-us -ran "**/*.md"
-- remark "**/*.md"
+- remark -f "**/*.md"
 after_success:
 - coveralls
 deploy:
