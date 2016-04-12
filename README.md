@@ -1,31 +1,40 @@
 # Django Contributing Commons (CC)
+
 **_Django CC_ is an open tool belt making maintaining an contributing to Django packages a breeze.**
 
-It contains a standardized contributing guide as well as various tools to automate conform code contribution.
+It contains a standardized contributing guide
+as well as various tools to automate conform code contribution.
 
 ## Preamble
+
 This project aims to provide confidence and convenience for both contributors and maintainers.
 
 ### Goals
+
 - Early on feedback and a shorter feedback loop.
 - High and highly sustainable code quality.
 
 ## Contribution Guide
-The contribution guide is the central part of the projects. All tools and example configurations aim to support following the contribution guide as easy as possible.
 
-**Contents**
+The contribution guide is the central part of the projects.
+All tools and example configurations aim to support following the contribution guide as easy as possible.
 
-1. [Quick Start Guide](CONTRIBUTING.md#Quick Start Guide)
-2. [Code of Conduct](CONTRIBUTING.md#Code of Conduct)
-3. [Code Style](CONTRIBUTING.md#Code Style)
+### Contents
+
+1. [Quick Start Guide](CONTRIBUTING.md#Quick-Start-Guide)
+2. [Code of Conduct](CONTRIBUTING.md#Code-of-Conduct)
+3. [Code Style](CONTRIBUTING.md#Code-Style)
 4. [Documentation](CONTRIBUTING.md#Documentation)
 5. [Git](CONTRIBUTING.md#Git)
 6. [Releases](CONTRIBUTING.md#Releases)
 
 ## Tools
-The tool belt consists of a set of tools and configuration files that ensure contributions to be aligned with the contribution guide.
+
+The tool belt consists of a set of tools and configuration files
+that ensure contributions to be aligned with the contribution guide.
 
 ### DCC
+
 Wo make things even easier we cooked up a little tool for you called `dcc`.
 It will set you up with just one simple command, so you can focus on implementing
 that feature you've been thinking about.
@@ -38,7 +47,7 @@ pip install dcc
 
 If you want to get started to contribute to any package supporting Django Contributing Commons:
 
-```
+```text
 usage: dcc [-h] [-v] PACKAGE
 
 positional arguments:
@@ -50,14 +59,17 @@ optional arguments:
 ```
 
 So if you want to write a feature for `django-select2`, just type:
+
 ```bash
-$ dcc django-select2
+dcc django-select2
 ```
 
 #### DCC for maintainers
+
 Supporting DCC is easy, all you need to do is set the `download_url` to you GitHub repository in your `setup.py` file.
 
 e.g.
+
 ```python
 setup(
     name='dcc',
@@ -70,31 +82,42 @@ setup(
 
 Make sure to put all your development requirements in the `requirements-dev.txt` file.
 
-### [EditorConfig]
-EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs. [[1]][EditorConfig]
+### EditorConfig
+
+[EditorConfig][EditorConfig] helps developers define and maintain consistent coding styles
+between different editors and IDEs. [[1]][EditorConfig]
 
 EditorConfig enables contributors to align their code with the guideline while writing it.
 
-The example file includes all file types defined in the contribution including the [`isort`](#isort) configuration.
+The example file includes all file types defined in the contribution
+including the [`isort`](#isort) configuration.
 
-### [isort][isort]
-isort your python imports for you so you don't have to. [[2]][isort]
+### isort
 
-isort is configured in the [pre-commit][pre-commit-config.yaml], [`setup.cfg`][setup.cfg] and [`editorconfig`][editorconfig].
+[isort][isort] your python imports for you so you don't have to. [[2]][isort]
 
-### [Flake8][flake8]
-Flake8 is a wrapper around these tools: [[3]][flake8]
+isort is configured in the [pre-commit][pre-commit-config.yaml],
+[`setup.cfg`][setup.cfg] and [`editorconfig`][editorconfig].
+
+### Flake8
+
+[Flake8][flake8] is a wrapper around these tools: [[3]][flake8]
+
 - [PyFlakes](https://launchpad.net/pyflakes)
 - [pep8](https://github.com/jcrocholl/pep8)
 - Ned Batchelder's [McCabe](http://nedbatchelder.com/blog/200803/python_code_complexity_microtool.html) script
 
-Additionally the [`setup.cfg`][setup.cfg] file make use of [pep8-naming](https://github.com/flintwork/pep8-naming), an Flake8 extension, that checks for pep8 conform naming.
+Additionally the [`setup.cfg`][setup.cfg] file make use of
+[pep8-naming](https://github.com/flintwork/pep8-naming), an Flake8 extension,
+that checks for pep8 conform naming.
 
 ### pydocstyle
-[pydocstyle] checks doc strings with their compliance with [PEP 257](https://www.python.org/dev/peps/pep-0257/).
 
-### [pre-commit][pre-commit]
-A framework for managing and maintaining multi-language pre-commit hooks. [[4]][pre-commit]
+[pydocstyle][pydocstyle] checks doc strings with their compliance with [PEP 257](https://www.python.org/dev/peps/pep-0257/).
+
+### pre-commit
+
+[pre-commit][pre-commit] is a framework for managing and maintaining multi-language pre-commit hooks. [[4]][pre-commit]
 
 [pre-commit]: (http://pre-commit.com/)
 [editorconfig]: examples/.editorconfig
