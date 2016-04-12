@@ -4,11 +4,8 @@ cache:
   - pip
 python:
   - "2.7"
-  - "3.3"
   - "3.4"
   - "3.5"
-  - "pypy"
-  - "pypy3"
 env:
   matrix:
     - DJANGO="Django<1.8,>=1.7"
@@ -17,7 +14,6 @@ env:
 matrix:
   fast_finish: true
   allow_failures:
-    - python: "3.5"
     - env: DJANGO="-e git+https://github.com/django/django.git@master#egg=Django"
 install:
   - pip install --upgrade pip
