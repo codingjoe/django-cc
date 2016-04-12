@@ -90,8 +90,8 @@ Flake8 is a wrapper around these tools: [[3]][flake8]
 
 Additionally the [`setup.cfg`][setup.cfg] file make use of [pep8-naming](https://github.com/flintwork/pep8-naming), an Flake8 extension, that checks for pep8 conform naming.
 
-### [pep257][pep257]
-pep257 checks doc strings with their compliance with [PEP 257](https://www.python.org/dev/peps/pep-0257/).
+### pydocstyle
+[pydocstyle] checks doc strings with their compliance with [PEP 257](https://www.python.org/dev/peps/pep-0257/).
 
 ### [pre-commit][pre-commit]
 A framework for managing and maintaining multi-language pre-commit hooks. [[4]][pre-commit]
@@ -100,6 +100,6 @@ A framework for managing and maintaining multi-language pre-commit hooks. [[4]][
 [editorconfig]: examples/.editorconfig
 [isort]: (https://github.com/timothycrosley/isort)
 [flake8]: (https://flake8.readthedocs.org/en/latest/)
-[pep257]: (https://github.com/GreenSteam/pep257)
+[pydocstyle]: https://pydocstyle.readthedocs.org/
 [setup.cfg]: examples/setup.cfg
 [pre-commit-config.yaml]: examples/.pre-commit-config.yaml
