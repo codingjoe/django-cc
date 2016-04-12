@@ -18,6 +18,10 @@ isort
 Flake8
 PyFlakes
 pre-commit
+OpenSource
+PyPi
+travis
+pydocstyle
  - CONTRIBUTING.md
 http
 namespaces

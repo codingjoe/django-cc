@@ -6,6 +6,7 @@ python:
   - "2.7"
   - "3.4"
   - "3.5"
+  - pypy
 env:
   matrix:
     - DJANGO="Django<1.8,>=1.7"
@@ -25,5 +26,7 @@ script:
   - flake8 --jobs=2 .
   - pep257 --verbose --explain --source --count
   - coverage run # Your run command.
+  # eg: for py.test
+  # coverage run --source my_package -m pytest
 after_success:
   - coveralls
