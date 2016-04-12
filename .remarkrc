@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "remark-lint": {
+      "no-multiple-toplevel-headings": false,
+      "list-item-indent": false,
+      "maximum-line-length": 119
+    }
+  },
+  "settings": {
+    "commonmark": true
+  }
+}
