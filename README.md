@@ -14,6 +14,10 @@ This project aims to provide confidence and convenience for both contributors an
 - Early on feedback and a shorter feedback loop.
 - High and highly sustainable code quality.
 
+### How to join
+
+We have created a [migration guide](MIGRATION-GUIDE.md) explaining how to adapt your project to support Django-CC.
+
 ## Contribution Guide
 
 The contribution guide is the central part of the projects.
