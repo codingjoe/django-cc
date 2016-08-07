@@ -10,13 +10,12 @@ install:
 - pip install --upgrade pip
 - pip install -r requirements-dev.txt
 before_script:
-- npm i remark remark-lint markdown-spellcheck  -g
+- npm i markdown-spellcheck  -g
 script:
 - isort --check-only --recursive --diff .
 - flake8 --jobs=2 .
 - pydocstyle --verbose --explain --source --count
 - mdspell --en-us -ran "**/*.md"
-- remark -f "**/*.md"
 after_success:
 - coveralls
 deploy:

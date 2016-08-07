@@ -22,7 +22,7 @@ Just add the following lines to your `CONTRIBUTING.md` file in your git root:
     dcc {PYPI_PACKAGE}
     hub checkout -b patch-1
     ```
-    
+
     To test locally simply run:
     ```bash
     tox
@@ -49,7 +49,7 @@ This will look somewhat similar to this:
 >     pip install dcc
 >     dcc django-stdimage
 >     hub checkout -b patch-1
-> 
+>
 > To test locally simply run:
 >
 >     tox
@@ -58,11 +58,11 @@ This will look somewhat similar to this:
 >
 >     hub commit
 >     hub pull-request -b codingjoe
-> 
+>
 
 ## Requirements
 
-To ensure that [`dcc`][dcc] can setup a virtualenv you will need to provide a
+To ensure that [`dcc`][dcc] can setup a `virtualenv` you will need to provide a
 `requirements-dev.txt` file. This file should contain all dependencies
 required to develop and test your package.
 
@@ -78,7 +78,7 @@ examples folder.
 ## Tox
 
 To encourage contributors to test as often an early as possible, we
-recommend setting up tox. We have an 
+recommend setting up tox. We have an
 [example configuration](examples/tox.ini)
 in the examples folder.
 Please make sure to also provide a tox test environment
