@@ -19,6 +19,7 @@ def check_binaries():
                 'Please download hup at https://hub.github.com/'
         )
 
+
 PROGRESS_MSG = "One {package_name}, coming right up!\n..."
 
 
