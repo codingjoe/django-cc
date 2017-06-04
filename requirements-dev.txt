@@ -4,4 +4,4 @@ mccabe==0.6.1
 pydocstyle==2.0.0
 pep8==1.7.0
 pep8-naming==0.4.1
-pre-commit==0.14.0
+pre-commit==0.14.1
